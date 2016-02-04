@@ -45,6 +45,11 @@
    var population = [];
    var density =[];
    var country =[];
+   var country1 =[];
+
+   //Chnage to whatever you want from second file eventually
+   var birthrate =[];
+   var mortalityrate =[];
    
    var svg = d3.select("#map").append("svg")
        .attr("width", width)
@@ -64,7 +69,13 @@
    countries.attr("class","Purples");
    
    d3.csv("data.csv", function(csv){
-    csv.forEach(function (d) {value_fun.set(d.code, +d.density);})
+    csv.forEach(function (d) 
+      {
+        value_fun.set(d.code, +d.density);
+        population[d.code] = d.population;
+       density[d.code] = d.density;
+       country1[d.code] = d.Country;  
+      })
    });
    
    d3.json("units.json", function(json) {
@@ -84,8 +95,8 @@
      document.getElementById("population").innerHTML = "Population:"+population[countrycode];
      document.getElementById("density").innerHTML = "Density:"+density[countrycode];
      document.getElementById("country1").innerHTML = "Country:"+country[countrycode];
-     document.getElementById("population1").innerHTML = "Population:"+population[countrycode];
-     document.getElementById("density1").innerHTML = "Density:"+density[countrycode];
+     document.getElementById("population1").innerHTML = "Birth Rate:"+birthrate[countrycode];
+     document.getElementById("density1").innerHTML = "Mortality Rate:"+mortalityrate[countrycode];
    }
    ///
 </script>
@@ -95,8 +106,8 @@
          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Variable
          <span class="caret"></span></button>
          <ul class="dropdown-menu">
-            <li><a href="#">Density1</a></li>
-            <li><a href="#">Population1</a></li>
+            <li><a href="#">Birth Rate</a></li>
+            <li><a href="#">Mortality Rate</a></li>
          </ul>
       </div>
       <div id="details1">
@@ -122,11 +133,11 @@
    
    countries2.attr("class","Oranges");
    
-   d3.csv("data.csv", function(csv){
+   d3.csv("data2.csv", function(csv){
      csv.forEach(function (d) 
      {
-       population[d.code] = d.population;
-       density[d.code] = d.density;
+       birthrate[d.code] = d.birthrate;
+       mortalityrate[d.code] = d.mortalityrate;
        country[d.code] = d.Country;
      })
    });
