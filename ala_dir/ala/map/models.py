@@ -28,7 +28,7 @@ class QualitativeVariable(models.Model):
 
 class Category(models.Model):
 	name = models.CharField(max_length=200)
-	color = models.CharField(max_length=10)
+	color = ColorField(blank=True, default='#FFFFFF')
 	variable = models.ForeignKey(QualitativeVariable, on_delete=models.CASCADE)
 
 	def __str__(self):
