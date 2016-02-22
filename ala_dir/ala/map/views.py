@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
+from django.template import RequestContext, loader
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    template =loader.get_template('map/map.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
