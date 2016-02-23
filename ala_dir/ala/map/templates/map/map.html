@@ -81,7 +81,7 @@
       })
    });
    
-   d3.json("{%static 'map/units.json' %}", function(json) {
+   d3.json("{% url 'geojson' %}", function(json) {
      countries.selectAll("path")
        .data(json.features)
        .enter().append("path")
@@ -145,7 +145,7 @@
      })
    });
    
-   d3.json("{%static 'map/units.json' %}", function(json) {
+   d3.json("{% url 'geojson' %}", function(json) {
      countries2.selectAll("path")
          .data(json.features)
        .enter().append("path")

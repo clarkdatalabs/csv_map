@@ -11,4 +11,12 @@ from .models import (DataSet, QuantitativeVariable, QuantitativeVariable, Catego
 
 def index(request):
 	data = DataSet.objects.all()
-	return render(request, 'map/map.html')
+	template = loader.get_template('map/map.html')
+	context = RequestContext(request, {
+		'data': data,
+		})
+	return HttpResponse(template.render(context))
+	#return render(request, 'map/map.html')
+
+def geojson(request):
+	return render(request,'map/units.json')
