@@ -71,7 +71,7 @@
    
    countries.attr("class","Purples");
    
-   d3.csv("{%static 'map/data.csv' %}", function(csv){
+   d3.csv("{% url 'csv' %}", function(csv){
     csv.forEach(function (d) 
       {
         value_fun.set(d.code, +d.density);
@@ -136,7 +136,7 @@
    
    countries2.attr("class","Oranges");
    
-   d3.csv("{%static 'map/data2.csv' %}", function(csv){
+   d3.csv("{% url 'csv' %}", function(csv){
      csv.forEach(function (d) 
      {
        birthrate[d.code] = d.birthrate;
