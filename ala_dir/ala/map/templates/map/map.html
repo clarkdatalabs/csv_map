@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+{% block content %}
 <meta charset="utf-8">
 <style>
    #countries path {
@@ -10,8 +11,8 @@
    float:left;
    }
 </style>
-<link href='colorbrewer.css' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" type="text/css" href="{% static 'monuments/style.css' %}"/>
+<link href="{%static 'map/colorbrewer.css' %}" rel='stylesheet' type='text/css' />
+<!--<link rel="stylesheet" type="text/css" href="{% static 'monuments/style.css' %}"/> -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!-- Optional theme -->
@@ -70,7 +71,7 @@
    
    countries.attr("class","Purples");
    
-   d3.csv("data.csv", function(csv){
+   d3.csv("{%static 'map/data.csv' %}", function(csv){
     csv.forEach(function (d) 
       {
         value_fun.set(d.code, +d.density);
@@ -80,7 +81,7 @@
       })
    });
    
-   d3.json("units.json", function(json) {
+   d3.json("{%static 'map/units.json' %}", function(json) {
      countries.selectAll("path")
        .data(json.features)
        .enter().append("path")
@@ -135,7 +136,7 @@
    
    countries2.attr("class","Oranges");
    
-   d3.csv("data2.csv", function(csv){
+   d3.csv("{%static 'map/data2.csv' %}", function(csv){
      csv.forEach(function (d) 
      {
        birthrate[d.code] = d.birthrate;
@@ -144,7 +145,7 @@
      })
    });
    
-   d3.json("units.json", function(json) {
+   d3.json("{%static 'map/units.json' %}", function(json) {
      countries2.selectAll("path")
          .data(json.features)
        .enter().append("path")
@@ -159,3 +160,4 @@
     return Math.floor(8 * (data - min)/(max-min));
    }
 </script>
+{% endblock %}

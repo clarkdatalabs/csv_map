@@ -1,0 +1,55 @@
+Country,code,birthrate,mortalityrate
+Nigeria,NGA,1,1200
+Ethiopia,ETH,2,1200
+Egypt,EGY,3,1200
+"Congo, Democratic Republic of the",COD,4,1200
+South Africa,ZAF,5,1200
+Tanzania,TZA,6,1200
+Kenya,KEN,7,1200
+Sudan,SDN,8,1200
+Algeria,DZA,9,1200
+Uganda,UGA,10,1200
+Morocco,MAR,11,1200
+Mozambique,MOZ,12,1200
+Ghana,GHA,13,1200
+Angola,AGO,14,1200
+Madagascar,MDG,15,1200
+Cameroon,CMR,16,1200
+Cote d'Ivoire,CIV,17,1200
+Niger,NER,18,1200
+Burkina Faso,BFA,19,1200
+Mali,MLI,20,1200
+Malawi,MWI,21,1200
+Zambia,ZMB,22,1200
+Zimbabwe,ZWE,23,1200
+Senegal,SEN,24,1200
+Chad,TCD,25,1200
+Guinea,GIN,26,1200
+Rwanda,RWA,27,1200
+Tunisia,TUN,28,1200
+Burundi,BDI,29,1200
+Benin,BEN,30,1200
+Somalia,SOM,31,1200
+Togo,TGO,32,1200
+Sierra Leone,SLE,33,1200
+Libya,LBY,34,1200
+Eritrea,ERI,35,1200
+Central African Republic,CAF,36,1200
+"Congo, Republic of the",COG,37,1200
+Liberia,LBR,38,1200
+Mauritania,MRT,39,1200
+Namibia,NAM,40,1200
+Botswana,BWA,41,1200
+Lesotho,LSO,42,1200
+"Gambia, The",GMB,43,1200
+Guinea-Bissau,GNB,44,1200
+Gabon,GAB,45,1200
+Swaziland,SWZ,46,1200
+Djibouti,DJI,47,1200
+Equatorial Guinea,GNQ,48,1200
+Comoros,COM,49,1200
+Western Sahara,SAH,50,1200
+Cape Verde,CPV,51,1200
+Sao Tome and Principe,STP,52,1200
+South Sudan,SDS,53,1200
+Somaliland,SOL,54,1200
